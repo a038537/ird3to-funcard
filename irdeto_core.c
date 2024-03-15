@@ -53,7 +53,7 @@ int k ,t;
 	wert[0] = ((wert[0] & 0xFE) / 2) | ((t & 0x1) * 0x80);
 }
 
-/*
+
 void rol(uint8_t *wert){
  	int k,t;
 	t = wert[0];
@@ -62,7 +62,7 @@ void rol(uint8_t *wert){
 	}
 	wert[9] = ((wert[9] & 0x7F) * 2) | ((t & 0x80) / 0x80);
 }
-*/
+
 
 void decrypt(uint8_t *klo,uint8_t *keys, int runden, int start, int pposition) {
 uint8_t i;
@@ -80,7 +80,7 @@ else{
 }
 }
 
-/*
+
 void encrypt(uint8_t *klo,uint8_t *keys, int runden, int start, int pposition){
 uint8_t i;
 for (i=0; i <13;i++){ror(keys);}
@@ -98,7 +98,7 @@ else{
 if ((i % 10) == 0) {rol(temp);}
 }
 }
-*/
+
 
 void sign(uint8_t *signaturnew, uint8_t *wert, uint8_t *zplainkey, int start) {
     uint8_t a,b,i,s;
@@ -142,7 +142,7 @@ buf[k] = (buf[k] >> 1) | (t2 << 7);
 }
 }
 
-/*
+
 void revcamcrypt(uint8_t *camkey, uint8_t *key)
 {
 uint8_t localkey[8], tmp1, tmp2,i;
@@ -181,7 +181,7 @@ key[15] = tmp1 ^ tmp2 ;
 XRotateLeft8Byte(localkey);
 }
 }
-*/
+
 
 void camcrypt(uint8_t *camkey, uint8_t *key)
 {
